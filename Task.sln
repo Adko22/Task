@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task", "Task\Task.csproj", "{D59B7E15-3397-483F-AF02-532B39A6F9F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{9B47DDB9-DBCB-4BB4-B56B-DBE8FF53EB7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{1F33FE71-F36F-415F-BF9B-AE5F2EAE7299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D59B7E15-3397-483F-AF02-532B39A6F9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59B7E15-3397-483F-AF02-532B39A6F9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59B7E15-3397-483F-AF02-532B39A6F9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59B7E15-3397-483F-AF02-532B39A6F9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B47DDB9-DBCB-4BB4-B56B-DBE8FF53EB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B47DDB9-DBCB-4BB4-B56B-DBE8FF53EB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B47DDB9-DBCB-4BB4-B56B-DBE8FF53EB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B47DDB9-DBCB-4BB4-B56B-DBE8FF53EB7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F33FE71-F36F-415F-BF9B-AE5F2EAE7299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F33FE71-F36F-415F-BF9B-AE5F2EAE7299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F33FE71-F36F-415F-BF9B-AE5F2EAE7299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F33FE71-F36F-415F-BF9B-AE5F2EAE7299}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29F37FDA-39E2-4BDA-BB72-A6558F93750F}
+	EndGlobalSection
+EndGlobal

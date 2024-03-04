@@ -1,0 +1,78 @@
+﻿@page
+@model IndexModel
+
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="startDatePicker">Start Date:</label>
+                <input type="date" id="startDatePicker" name="startDate" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="endDatePicker">End Date:</label>
+                <input type="date" id="endDatePicker" name="endDate" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="dataScope" id="userHours" value="user" checked>
+                <label class="form-check-label" for="userHours">User Hours</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="dataScope" id="projectHours" value="project">
+                <label class="form-check-label" for="projectHours">Project Hours</label>
+            </div>
+            <button id="loadChartButton" class="btn btn-sm btn-primary mt-2">Load Chart Data</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Users</h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model.Users)
+                        {
+                            <tr>
+                                <td>@user.FirstName @user.LastName</td>
+                                <td>@user.Email</td>
+                                <td><button class="compare-btn btn-primary" 
+                                    data-userid="@user.Id" 
+                                    data-compare-url="@Url.Page("/Index", "CompareUserHours")">Compare</button></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <nav>
+                <ul class="pagination">
+                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                            <a class="page-link" href="?CurrentPage=@i">@i</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Google Chart Column -->
+        <div class="col-md-6">
+            <h3 class="mb-4 text-center">Top Users by Hours</h3>
+            <div id="topUsersChart" style="width: 800px; height: 600px;" data-chart-url="@Url.Page("/Index", "ChartData")"></div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="~/js/googleChart.js" asp-append-version="true"></script>
+}
